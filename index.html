@@ -13,43 +13,35 @@
         <h1>Prototype</h1>
     </header>
 
+    <!-- enterkeyhint="next" can be used with input fields -->
     <main class="">
         <div class="container">
             <form class="sub-container" action="" autocomplete="on">
                 <div class="box box-left">
-                    <label for="fname">Name</label>
+                    <label for="fname">Full Name</label>
+                    <div><input type="text" id="fname" name="fname" placeholder="Name" required autofocus></div>
+                    <div id="invalid"></div>
                 </div>
+                
                 <div class="box box-right">
-                    <input enterkeyhint="next" type="text" id="fname" name="fname" placeholder="Name" required autofocus>
-                </div>
-
-                <div class="box box-left">
                     <label for="dob">D.O.B</label>
+                    <div><input type="date" id="dob" name="dob" required></div>
                 </div>
-                <dib class="box box-right">
-                    <input enterkeyhint="next" type="date" id="dob" name="dob" required>
-                </dib>
 
                 <div class="box box-left">
-                    <label for="order">Order item</label>
+                    <label for="email">Email</label>
+                    <div><input type="email" id="email" name="email" placeholder="email:" required></div>
+                    <div id="invalidemail"></div>
+                    <br>
+                    <label for="pwd">Password</label>
+                    <div><input type="password" id="pwd" name="pwd" placeholder="password" required></div>
+                    <div id="invalidpwd"></div>
                 </div>
-                <dib class="box box-right">
-                    <input enterkeyhint="next" type="text" id="order" name="order" placeholder="Dish Name" required>
-                </dib>
-
-                <div class="box box-left">
-                    <label for="details">Any Details</label>
+                
+                <div class="box box-right">
+                    <label for="details">Address</label>
+                    <div><textarea name="details" id="details" cols="25" rows="5" placeholder="address..."></textarea></div>
                 </div>
-                <dib class="box box-right">
-                    <textarea name="details" id="details" cols="25" rows="5" placeholder="details..."></textarea>
-                </dib>
-
-                <div class="box box-left">
-                    <label for="amount">Amount</label>
-                </div>
-                <dib class="box box-right">
-                    <input enterkeyhint="next" type="text" id="amount" name="amount" placeholder="Amount" required>
-                </dib>
 
                 <div class="box-btn">
                     <div class="box1">
@@ -57,7 +49,7 @@
                     </div>
     
                     <div class="box2">
-                        <input type="submit" value="Save">
+                        <input id="submit" type="submit" value="Save">
                     </div>
                 </div>
             </form>
@@ -65,6 +57,6 @@
         </div>
     </main>
     
-    <script src="/js/"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
