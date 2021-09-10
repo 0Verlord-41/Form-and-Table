@@ -78,13 +78,22 @@ pwd.addEventListener('blur', ()=>{
 
 let submit = document.getElementById('submit');
 submit.addEventListener('click', (e)=>{
-    e.preventDefault();
+    // e.preventDefault();
 
-    if(valid && validEmail && validPwd){
-        console.log('Submitted');
+    let aname=document.getElementById('fname').value;
+
+    if(aname==""){
+        alert('Please input a value!');
+        return false;
     }
     else{
-        console.log('Something is not valid');
+        if(valid && validEmail && validPwd){
+            console.log('Submitted');
+            alert('Submitted!');
+            return true;
+        }
+        else{
+            console.log('Something is not valid');
+        }
     }
-    
 });
